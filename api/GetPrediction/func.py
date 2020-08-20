@@ -29,7 +29,7 @@ def main(context: func.Context, req: func.HttpRequest) -> func.HttpResponse:
 
     # load model if not already in global memory
     if session == None or transform == None or classes == None or input_name == None:
-        logging.info('=========================>Loading model, transorms and classes')
+        logging.info('=========================>Loading model, transforms and classes')
         try:
             model_path = os.path.join(context.function_directory, 'model.onnx')
             classes = ['burrito', 'tacos']
