@@ -35,7 +35,7 @@ export default {
   methods: {
     predict: async function () {
       this.prediction = null
-      const endpoint = "http://localhost:7071/api/predict"
+      const endpoint = `${process.env.VUE_TACOS_API}/api/predict`
 
       const options = {
         method: "POST",
